@@ -1,7 +1,7 @@
 {
   "name": "alfred-google-translate",
-  "version": "1.1.1",
-  "description": "Alfred 3 workflow to translate between zh-cn and en with google tanslate api",
+  "version": "2.0.1",
+  "description": "Alfred 3 workflow to translate with google tanslate api",
   "license": "MIT",
   "repository": "xfslove/alfred-google-translate",
   "author": {
@@ -18,8 +18,14 @@
     "preuninstall": "alfy-cleanup"
   },
   "files": [
+    "tts.js",
+    "languages.js",
+    "translate.js",
+    "token.js",
     "index.js",
     "icon.png",
+    "tts.png",
+    "warn.png",
     "info.plist"
   ],
   "keywords": [
@@ -32,11 +38,16 @@
   ],
   "dependencies": {
     "alfy": "^0.6.0",
-    "china-google-translate-api": "latest",
-    "is-chinese": "^1.2.5"
+    "configstore": "^2.0.0",
+    "got": "^6.3.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
+    "puppeteer": "^1.11.0",
+    "codecov": "^1.0.1",
+    "coveralls": "^2.11.11",
+    "nyc": "^7.0.0",
     "ava": "*",
     "xo": "*"
   }

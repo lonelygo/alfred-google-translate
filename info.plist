@@ -12,19 +12,9 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>ADDC8E18-0DF1-4EB3-8364-78E59718C8DF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>525521A9-62B9-40EE-B9D6-EB1B484BA29D</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -45,29 +35,16 @@
 			</dict>
 		</array>
 	</dict>
+	<key>createdby</key>
+	<string>hanwen.huang</string>
+	<key>description</key>
+	<string>Alfred 3 workflow to translate with google tanslate api</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
 	<string>Google Translate</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>ADDC8E18-0DF1-4EB3-8364-78E59718C8DF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -96,6 +73,33 @@
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>C111234F-195C-486B-BB1D-04203C339ADD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>if [ "$read" = "local" ];then
+say {query} -v Samantha
+else
+afplay {query}
+fi</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>525521A9-62B9-40EE-B9D6-EB1B484BA29D</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -146,29 +150,6 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>say {query}</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>525521A9-62B9-40EE-B9D6-EB1B484BA29D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -177,23 +158,16 @@
 		<key>287F7DE4-2A8A-4356-9659-797E2F2AE72A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>300</integer>
 			<key>ypos</key>
 			<integer>160</integer>
 		</dict>
 		<key>525521A9-62B9-40EE-B9D6-EB1B484BA29D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>650</integer>
+			<integer>570</integer>
 			<key>ypos</key>
-			<integer>270</integer>
-		</dict>
-		<key>ADDC8E18-0DF1-4EB3-8364-78E59718C8DF</key>
-		<dict>
-			<key>xpos</key>
-			<integer>640</integer>
-			<key>ypos</key>
-			<integer>40</integer>
+			<integer>160</integer>
 		</dict>
 		<key>C111234F-195C-486B-BB1D-04203C339ADD</key>
 		<dict>
@@ -203,5 +177,9 @@
 			<integer>160</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string>https://github.com/xfslove/alfred-google-translate#readme</string>
 </dict>
 </plist>
